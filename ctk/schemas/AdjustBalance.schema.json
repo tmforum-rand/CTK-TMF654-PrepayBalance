@@ -1,0 +1,61 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "anyOf": [
+        {
+            "properties": {
+                "bucket": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id"
+                    ]
+                }
+            },
+            "required": ["bucket"]
+        },
+        {
+            "properties": {
+                "product": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            },
+            "required": ["product"]
+        },
+        {
+            "properties": {
+                "logicalResource": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            },
+            "required": ["logicalResource"]
+        }
+    ],
+    "required": ["amount", "usageType"]
+}

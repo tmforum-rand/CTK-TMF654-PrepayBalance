@@ -1,0 +1,108 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "anyOf": [
+        {
+            "properties": {
+                "amount": {
+                    "type": "object",
+                    "properties": {
+                        "amount": {
+                            "type": "integer"
+                        },
+                        "units": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "amount",
+                        "units"
+                    ]
+                },
+                "bucket": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "id"
+                    ]
+                }
+            },
+            "required": ["bucket"]
+        },
+        {
+            "properties": {
+                "amount": {
+                    "type": "object",
+                    "properties": {
+                        "amount": {
+                            "type": "integer"
+                        },
+                        "units": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "amount",
+                        "units"
+                    ]
+                },
+                "product": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            },
+            "required": ["product"]
+        },
+        {
+            "properties": {
+                "amount": {
+                    "type": "object",
+                    "properties": {
+                        "amount": {
+                            "type": "integer"
+                        },
+                        "units": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "amount",
+                        "units"
+                    ]
+                },
+                "logicalResource": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id"
+                        ]
+                    }
+                }
+            },
+            "required": ["logicalResource"]
+        }
+    ],
+    "required": [
+        "amount"
+    ]
+}

@@ -1,0 +1,69 @@
+{
+    "url": "http://tmf654-prepaybalance-v4.mybluemix.net/tmf-api/prepayBalanceManagement/v4/",
+    "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+    },
+    "payloads": {
+        "Bucket": {
+            "POST": {
+                "payload": {
+                    "usageType": "monetary"
+                }
+            }
+        },
+        "TopupBalance": {
+            "POST": {
+                "payload": {
+                    "amount": {
+                        "amount": 50,
+                        "units": "EUR"
+                    },
+                    "bucket": {
+                        "id": "11",
+                        "href": "/prepayBalanceManagement/v4/bucket/11"
+                    }
+                }
+            }
+        },
+        "AdjustBalance": {
+            "POST": {
+                "payload": {
+                    "amount": {
+                        "amount": 50,
+                        "units": "EUR"
+                    },
+                    "usageType": "monetary",
+                    "product": {
+                        "id": "d3ba9b4b-781a-42a7-9976-12fb826f6b99"
+                    },
+                    "bucket": {
+                        "id": "11",
+                          "href": "/prepayBalanceManagement/v4/bucket/11"
+                      }
+                }
+            }
+        },
+        "ReserveBalance": {
+            "POST": {
+                "payload": {
+                    "amount": {
+                        "amount": 50,
+                        "units": "EUR"
+                    },
+                    "relatedParty": [{
+                        "id": "5",
+                        "href": "/partyManagement/customer/22",
+                        "name": "jerry wilson",
+                        "role": "customer",
+                        "@referredType": "Individual"
+                    }],
+                    "bucket": {
+                        "id": "11",
+                          "href": "/prepayBalanceManagement/v4/bucket/11"
+                      }
+                }
+            }
+        }
+    }
+}

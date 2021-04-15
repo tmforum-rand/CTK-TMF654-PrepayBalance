@@ -1,0 +1,19 @@
+{
+    "amount": {
+        "amount": 50,
+        "units": "EUR"
+    },
+    "bucket": {
+        "id": "11"
+    },
+    "product": [
+        {
+            "id": "prd1"
+        }
+    ],
+    "logicalResource": [
+        {
+            "id": "22"
+        }
+    ]
+}

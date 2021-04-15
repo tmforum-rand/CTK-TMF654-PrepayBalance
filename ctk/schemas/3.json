@@ -1,0 +1,10 @@
+{
+    "amount": {
+        "amount": 50,
+        "units": "EUR"
+    },
+    "usageType": "monetary",
+    "product": {
+        "id": "d3ba9b4b-781a-42a7-9976-12fb826f6b99"
+    }
+}
